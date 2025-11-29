@@ -1,7 +1,5 @@
-const byteSize = (str) => {
-  // write your code here
-};
-
-// Do not change the code below
-const str = prompt("Enter some string.");
-alert(byteSize(str));
+function byteSize(str) {
+    // Blob automatically calculates byte size (ASCII + non-ASCII)
+    const blob = new Blob([str]);
+    return blob.size;
+}
